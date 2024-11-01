@@ -1,32 +1,30 @@
 @startuml
 start
 
-:Pengguna buka aplikasi;
-:Pengguna pilih produk;
+:Pengguna membuka aplikasi;
+:Pengguna memilih produk;
 :Pengguna menambah produk ke keranjang;
 
-if (Keranjang kosong?) then (Tidak)
-    :Pengguna lanjutkan belanja;
-    repeat
-else (Ya)
-    :Pengguna lanjut ke pembayaran;
-endif
-
-:Pengguna masukkan informasi pembayaran;
-:Pengguna pilih metode pembayaran;
-:Pengguna konfirmasi pembayaran;
-
-if (Pembayaran berhasil?) then (Ya)
-    :Sistem verifikasi pembayaran;
-    :Sistem konfirmasi pesanan;
-    :Sistem kirim notifikasi kepada pengguna;
+if (Keranjang kosong?) then (Ya)
+    :Pengguna melanjutkan belanja;
 else (Tidak)
-    :Sistem informasikan pembayaran gagal;
-    :Pengguna ulangi pembayaran;
+    :Pengguna lanjut ke pembayaran;
+    :Pengguna memasukkan informasi pembayaran;
+    :Pengguna memilih metode pembayaran;
+    :Pengguna mengonfirmasi pembayaran;
+
+    if (Pembayaran berhasil?) then (Ya)
+        :Sistem memverifikasi pembayaran;
+        :Sistem mengonfirmasi pesanan;
+        :Sistem mengirim notifikasi kepada pengguna;
+    else (Tidak)
+        :Sistem menginformasikan bahwa pembayaran gagal;
+        :Pengguna mengulangi pembayaran;
+    endif
 endif
 
-:Sistem proses pengiriman;
-:Pengguna terima produk;
+:Sistem memproses pengiriman;
+:Pengguna menerima produk;
 
 stop
 @enduml
