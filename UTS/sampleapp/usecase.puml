@@ -1,0 +1,24 @@
+@startuml
+actor Pengguna
+actor Admin
+actor "Sistem Pembayaran" as PaymentSystem
+
+usecase "Melihat Produk" as UC1
+usecase "Menambahkan Produk ke Keranjang" as UC2
+usecase "Melakukan Pembayaran" as UC3
+usecase "Mengelola Data Produk" as UC4
+usecase "Mengelola Pesanan" as UC5
+usecase "Verifikasi Pembayaran" as UC6
+usecase "Notifikasi" as UC7
+
+Pengguna --> UC1
+Pengguna --> UC2
+Pengguna --> UC3
+PaymentSystem --> UC6
+UC3 --> UC6
+Admin --> UC4
+Admin --> UC5
+UC5 --> UC7
+UC3 --> UC7
+
+@enduml
