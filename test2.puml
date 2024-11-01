@@ -1,0 +1,27 @@
+@startuml
+
+package App{
+ package model {
+class user{
+-name
+-email 
+}
+}
+note botom: php atrisan make:filament-resource UserResource --generate
+}
+ package migration{
+class Create_user{
+-id
+-name
+}
+}
+note botom: php atrisan make:filament-resource UserResource --generate
+}
+package filament-resource{
+class UserResource{
++test
+}
+}
+note botom: php atrisan make:filament-resource UserResource --generate
+}
+@enduml
