@@ -1,0 +1,32 @@
+@startuml
+start
+
+:Pengguna buka aplikasi;
+:Pengguna pilih produk;
+:Pengguna menambah produk ke keranjang;
+
+if (Keranjang kosong?) then (Tidak)
+    :Pengguna lanjutkan belanja;
+    repeat
+else (Ya)
+    :Pengguna lanjut ke pembayaran;
+endif
+
+:Pengguna masukkan informasi pembayaran;
+:Pengguna pilih metode pembayaran;
+:Pengguna konfirmasi pembayaran;
+
+if (Pembayaran berhasil?) then (Ya)
+    :Sistem verifikasi pembayaran;
+    :Sistem konfirmasi pesanan;
+    :Sistem kirim notifikasi kepada pengguna;
+else (Tidak)
+    :Sistem informasikan pembayaran gagal;
+    :Pengguna ulangi pembayaran;
+endif
+
+:Sistem proses pengiriman;
+:Pengguna terima produk;
+
+stop
+@enduml

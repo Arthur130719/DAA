@@ -1,0 +1,25 @@
+@startuml
+
+class Mahasiswa{
+-id
+-name
+-function()
+}
+
+class Matakuliah{
+-id
+-name
+-test()
+}
+
+class Testing{
++fillable
+-fillable
+-function()
+-name()
+}
+
+Mahasiswa "*..1" - "*..*" Matakuliah
+(Mahasiswa,Testing) - Matakuliah
+
+@enduml
