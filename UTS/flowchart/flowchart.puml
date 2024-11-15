@@ -1,0 +1,26 @@
+@startuml
+
+start
+
+:User Mengakses Aplikasi;
+:Menampilkan Halaman Utama;
+
+if (Apakah User Memilih Menu Tambah Pelanggan?) then (yes)
+  :Tampilkan Form Input Pelanggan;
+else (no)
+  :Tampilkan Daftar Pelanggan;
+endif
+
+:User Mengisi Data Pelanggan;
+:User Memilih Paket WiFi;
+
+if (Apakah Paket Valid?) then (yes)
+  :Simpan Data Pelanggan;
+  :Tampilkan Pesan Sukses - Pelanggan Ditambahkan;
+else (no)
+  :Tampilkan Pesan Error;
+endif
+
+stop
+
+@enduml

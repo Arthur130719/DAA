@@ -287,8 +287,8 @@ class ComposerStaticInitc181fb186154c07526beed3cc304317a
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Z3d0X\\FilamentLogger\\Database\\Factories\\' => 
         array (
@@ -514,8 +514,8 @@ class ComposerStaticInitc181fb186154c07526beed3cc304317a
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -611,8 +611,8 @@ class ComposerStaticInitc181fb186154c07526beed3cc304317a
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -905,14 +905,27 @@ class ComposerStaticInitc181fb186154c07526beed3cc304317a
         'App\\Console\\Commands\\DevIde' => __DIR__ . '/../..' . '/app/Console/Commands/DevIde.php',
         'App\\Console\\Commands\\ProjectInitialize' => __DIR__ . '/../..' . '/app/Console/Commands/ProjectInitialize.php',
         'App\\Console\\Commands\\ProjectUpdate' => __DIR__ . '/../..' . '/app/Console/Commands/ProjectUpdate.php',
+        'App\\Filament\\Admin\\Resources\\ClassroomResource' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/ClassroomResource.php',
+        'App\\Filament\\Admin\\Resources\\ClassroomResource\\Pages\\CreateClassroom' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/ClassroomResource/Pages/CreateClassroom.php',
+        'App\\Filament\\Admin\\Resources\\ClassroomResource\\Pages\\EditClassroom' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/ClassroomResource/Pages/EditClassroom.php',
+        'App\\Filament\\Admin\\Resources\\ClassroomResource\\Pages\\ListClassrooms' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/ClassroomResource/Pages/ListClassrooms.php',
+        'App\\Filament\\Admin\\Resources\\CustomerResource' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/CustomerResource.php',
+        'App\\Filament\\Admin\\Resources\\CustomerResource\\Pages\\CreateCustomer' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/CustomerResource/Pages/CreateCustomer.php',
+        'App\\Filament\\Admin\\Resources\\CustomerResource\\Pages\\EditCustomer' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/CustomerResource/Pages/EditCustomer.php',
+        'App\\Filament\\Admin\\Resources\\CustomerResource\\Pages\\ListCustomers' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/CustomerResource/Pages/ListCustomers.php',
         'App\\Filament\\Admin\\Resources\\UserResource' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/UserResource.php',
         'App\\Filament\\Admin\\Resources\\UserResource\\Pages\\CreateUser' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/UserResource/Pages/CreateUser.php',
         'App\\Filament\\Admin\\Resources\\UserResource\\Pages\\EditUser' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/UserResource/Pages/EditUser.php',
         'App\\Filament\\Admin\\Resources\\UserResource\\Pages\\ListUsers' => __DIR__ . '/../..' . '/app/Filament/Admin/Resources/UserResource/Pages/ListUsers.php',
         'App\\Filament\\Admin\\Widgets\\LatestAccessLogs' => __DIR__ . '/../..' . '/app/Filament/Admin/Widgets/LatestAccessLogs.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Models\\Classroom' => __DIR__ . '/../..' . '/app/Models/Classroom.php',
+        'App\\Models\\Customer' => __DIR__ . '/../..' . '/app/Models/Customer.php',
+        'App\\Models\\Package' => __DIR__ . '/../..' . '/app/Models/Package.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Policies\\ActivityPolicy' => __DIR__ . '/../..' . '/app/Policies/ActivityPolicy.php',
+        'App\\Policies\\ClassroomPolicy' => __DIR__ . '/../..' . '/app/Policies/ClassroomPolicy.php',
+        'App\\Policies\\CustomerPolicy' => __DIR__ . '/../..' . '/app/Policies/CustomerPolicy.php',
         'App\\Policies\\RolePolicy' => __DIR__ . '/../..' . '/app/Policies/RolePolicy.php',
         'App\\Policies\\UserPolicy' => __DIR__ . '/../..' . '/app/Policies/UserPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -1262,7 +1275,11 @@ class ComposerStaticInitc181fb186154c07526beed3cc304317a
         'DanHarrin\\LivewireRateLimiting\\Exceptions\\TooManyRequestsException' => __DIR__ . '/..' . '/danharrin/livewire-rate-limiting/src/Exceptions/TooManyRequestsException.php',
         'DanHarrin\\LivewireRateLimiting\\WithRateLimiting' => __DIR__ . '/..' . '/danharrin/livewire-rate-limiting/src/WithRateLimiting.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\ClassroomSeeder' => __DIR__ . '/../..' . '/database/seeders/ClassroomSeeder.php',
+        'Database\\Seeders\\CustomerSeeder' => __DIR__ . '/../..' . '/database/seeders/CustomerSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\PackageSeeder' => __DIR__ . '/../..' . '/database/seeders/PackageSeeder.php',
+        'Database\\Seeders\\RoleSeeder' => __DIR__ . '/../..' . '/database/seeders/RoleSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',

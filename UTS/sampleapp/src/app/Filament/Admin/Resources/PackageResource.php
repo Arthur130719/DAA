@@ -2,17 +2,20 @@
 
 namespace App\Filament\Admin\Resources;
 
-use App\Filament\Admin\Resources\ClassroomResource\Pages;
-use App\Models\Classroom;
+use App\Filament\Admin\Resources\PackageResource\Pages;
+use App\Filament\Admin\Resources\PackageResource\RelationManagers;
+use App\Models\Package;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ClassroomResource extends Resource
+class PackageResource extends Resource
 {
-    protected static ?string $model = Classroom::class;
+    protected static ?string $model = Package::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -20,9 +23,12 @@ class ClassroomResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('nama_paket')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(50),
+                Forms\Components\TextInput::make('harga')
+                    ->required()
+                    ->numeric(),
             ]);
     }
 
@@ -30,8 +36,11 @@ class ClassroomResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('nama_paket')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('harga')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -64,9 +73,9 @@ class ClassroomResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListClassrooms::route('/'),
-            'create' => Pages\CreateClassroom::route('/create'),
-            'edit' => Pages\EditClassroom::route('/{record}/edit'),
+            'index' => Pages\ListPackages::route('/'),
+            'create' => Pages\CreatePackage::route('/create'),
+            'edit' => Pages\EditPackage::route('/{record}/edit'),
         ];
     }
 }

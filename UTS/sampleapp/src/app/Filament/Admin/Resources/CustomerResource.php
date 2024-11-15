@@ -2,17 +2,17 @@
 
 namespace App\Filament\Admin\Resources;
 
-use App\Filament\Admin\Resources\ClassroomResource\Pages;
-use App\Models\Classroom;
+use App\Filament\Admin\Resources\CustomerResource\Pages;
+use App\Models\Customer;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class ClassroomResource extends Resource
+class CustomerResource extends Resource
 {
-    protected static ?string $model = Classroom::class;
+    protected static ?string $model = Customer::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -20,9 +20,15 @@ class ClassroomResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('nama_pelanggan')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(100),
+                Forms\Components\TextInput::make('alamat_pelanggan')
+                    ->maxLength(255)
+                    ->default(null),
+                Forms\Components\TextInput::make('package_id')
+                    ->required()
+                    ->numeric(),
             ]);
     }
 
@@ -30,8 +36,13 @@ class ClassroomResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('nama_pelanggan')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('alamat_pelanggan')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('package_id')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -64,9 +75,9 @@ class ClassroomResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListClassrooms::route('/'),
-            'create' => Pages\CreateClassroom::route('/create'),
-            'edit' => Pages\EditClassroom::route('/{record}/edit'),
+            'index' => Pages\ListCustomers::route('/'),
+            'create' => Pages\CreateCustomer::route('/create'),
+            'edit' => Pages\EditCustomer::route('/{record}/edit'),
         ];
     }
 }

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Classroom;
+use Illuminate\Database\Seeder;
 
 class ClassroomSeeder extends Seeder
 {
@@ -23,12 +22,12 @@ class ClassroomSeeder extends Seeder
             'CR 407',
             'CR 408',
             'CR 409',
-            'CR 410'
+            'CR 410',
         ];
-        
+
         foreach ($data as $dataclass) {
             Classroom::firstOrCreate([
-                'name' => $dataclass
+                'name' => $dataclass,
             ]);
 
         }
