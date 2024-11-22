@@ -1,5 +1,5 @@
 1. Migration (Database Schema)
-Migration berfungsi untuk mendefinisikan struktur tabel di dalam database. Berikut adalah penjelasan untuk masing-masing bagian dari migration yang telah buat:
+Migration berfungsi untuk mendefinisikan struktur tabel di dalam database. Berikut adalah penjelasan untuk masing-masing bagian dari migration yang telah dibuat:
 
 customers Table Migration
 php
