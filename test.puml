@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor LightBlue
+    BorderColor Black
+    ArrowColor Black
+}
+
+actor Pelanggan as Customer
+actor "Bagian Penjualan" as SalesDept
+actor "Kepala Bagian Penjualan" as SalesManager
+
+rectangle "PT. Nusantara Use Cases" {
+    usecase "Menerima Surat Pesanan" as ReceiveOrder
+    usecase "Membuat Faktur dan Surat Jalan" as GenerateInvoice
+    usecase "Membuat Kwitansi" as CreateReceipt
+    usecase "Membuat Laporan Penjualan" as PrepareSalesReport
+    usecase "Laporan Penjualan" as ReceiveSalesReport
+}
+
+' Hubungan Aktor dan Use Cases
+Customer -- ReceiveOrder : "Mengirim Pesanan"
+Customer -- CreateReceipt : "Menerima Kwitansi"
+
+SalesDept -- ReceiveOrder : "Mencatat Pesanan"
+SalesDept -- GenerateInvoice : "Membuat Dokumen"
+SalesDept -- CreateReceipt : "Menyediakan Kwitansi"
+SalesDept -- PrepareSalesReport : "Menyusun Laporan"
+
+PrepareSalesReport -- ReceiveSalesReport : "Laporan Bulanan"
+
+SalesManager -- ReceiveSalesReport : "Menerima Laporan"
+
+@enduml

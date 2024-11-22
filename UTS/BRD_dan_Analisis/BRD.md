@@ -1,9 +1,8 @@
 1. Migration (Database Schema)
-Migration berfungsi untuk mendefinisikan struktur tabel di dalam database. Berikut adalah penjelasan untuk masing-masing bagian dari migration yang telah Anda buat:
+Migration berfungsi untuk mendefinisikan struktur tabel di dalam database. Berikut adalah penjelasan untuk masing-masing bagian dari migration yang telah buat:
 
 customers Table Migration
 php
-Copy code
 Schema::create('customers', function (Blueprint $table) {
     $table->id();
     $table->string('nama_pelanggan');
@@ -21,7 +20,6 @@ $table->timestamps(): Menyimpan informasi waktu kapan data pelanggan dibuat dan 
 $table->foreign('package_id')->references('id')->on('packages'): Menambahkan relasi antara kolom package_id di customers dan kolom id di packages, yang memastikan integritas data antara paket dan pelanggan.
 packages Table Migration
 php
-Copy code
 Schema::create('packages', function (Blueprint $table) {
     $table->id();
     $table->string('nama_paket');
@@ -35,7 +33,6 @@ $table->timestamps(): Menyimpan informasi waktu kapan paket ditambahkan atau dip
 
 2. Model Customer
 php
-Copy code
 class Customer extends Model
 {
     use HasFactory;
@@ -56,7 +53,6 @@ public function package(): Fungsi ini mendefinisikan relasi antara Customer dan 
 
 3. Model Package
 php
-Copy code
 class Package extends Model
 {
     use HasFactory;
@@ -76,7 +72,6 @@ public function customers(): Fungsi ini mendefinisikan relasi hasMany antara Pac
 
 4. Seeder PackageSeeder
 php
-Copy code
 class PackageSeeder extends Seeder
 {
     public function run(): void
@@ -97,7 +92,6 @@ Package::create($package): Menyisipkan data setiap paket ke dalam tabel packages
 
 5. Seeder CustomerSeeder
 php
-Copy code
 class CustomerSeeder extends Seeder
 {
     public function run(): void
@@ -114,7 +108,6 @@ Customer::create(): Menyisipkan data pelanggan ke dalam tabel customers. Data ya
 
 6. Database Seeder
 php
-Copy code
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
