@@ -1,4 +1,4 @@
-# Nama Aplikasi: GrowU
+## Nama Aplikasi: GrowU
 
 # Deskripsi Singkat:
 GrowU adalah aplikasi berbasis web dan mobile untuk mendukung pendidikan dan pengembangan diri melalui kursus online dan pelacakan tujuan (goal tracker).

@@ -1,4 +1,4 @@
-# Analisis Aplikasi GrowU
+## Analisis Aplikasi GrowU
 
 # Deskripsi Aplikasi
 GrowU adalah aplikasi berbasis teks yang membantu pengguna dalam pengembangan diri melalui kursus dan penetapan tujuan. Aplikasi ini memberikan sistem poin sebagai bentuk motivasi kepada pengguna dalam menyelesaikan kursus dan mencapai tujuan pribadi.
